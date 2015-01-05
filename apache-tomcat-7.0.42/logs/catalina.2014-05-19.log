@@ -1,0 +1,150 @@
+May 19, 2014 12:53:53 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: Loaded APR based Apache Tomcat Native library 1.1.27 using APR version 1.4.6.
+May 19, 2014 12:53:53 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+May 19, 2014 12:53:55 AM org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFO: OpenSSL successfully initialized (OpenSSL 1.0.1d 5 Feb 2013)
+May 19, 2014 12:53:55 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-apr-8080"]
+May 19, 2014 12:53:55 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-apr-8009"]
+May 19, 2014 12:53:55 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 2615 ms
+May 19, 2014 12:53:55 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+May 19, 2014 12:53:55 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.42
+May 19, 2014 12:53:55 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive D:\softwares\apache-tomcat-7.0.42\webapps\ApnaAspatal.war
+May 19, 2014 12:53:57 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive D:\softwares\apache-tomcat-7.0.42\webapps\ApnaAspatalAdmin.war
+May 19, 2014 12:53:57 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive D:\softwares\apache-tomcat-7.0.42\webapps\ApnaAspatalBoothWebClient.war
+May 19, 2014 12:53:57 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive D:\softwares\apache-tomcat-7.0.42\webapps\ApnaAspatalDoctorWebClient.war
+May 19, 2014 12:53:58 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive D:\softwares\apache-tomcat-7.0.42\webapps\jenkins.war
+May 19, 2014 12:54:55 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive D:\softwares\apache-tomcat-7.0.42\webapps\remote-healthcare.war
+May 19, 2014 12:54:56 AM jenkins.InitReactorRunner$1 onAttained
+INFO: Started initialization
+May 19, 2014 12:55:03 AM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(D:\softwares\apache-tomcat-7.0.42\webapps\remote-healthcare\WEB-INF\lib\servlet-api-2.5.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+May 19, 2014 12:55:33 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\softwares\apache-tomcat-7.0.42\webapps\docs
+May 19, 2014 12:55:34 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\softwares\apache-tomcat-7.0.42\webapps\examples
+May 19, 2014 12:55:36 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\softwares\apache-tomcat-7.0.42\webapps\host-manager
+May 19, 2014 12:55:36 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\softwares\apache-tomcat-7.0.42\webapps\manager
+May 19, 2014 12:55:36 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\softwares\apache-tomcat-7.0.42\webapps\ROOT
+May 19, 2014 12:55:37 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-8080"]
+May 19, 2014 12:55:37 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-apr-8009"]
+May 19, 2014 12:55:37 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 101884 ms
+May 19, 2014 12:56:50 AM jenkins.InitReactorRunner$1 onAttained
+INFO: Listed all plugins
+May 19, 2014 12:56:51 AM jenkins.InitReactorRunner$1 onAttained
+INFO: Prepared all plugins
+May 19, 2014 12:56:51 AM jenkins.InitReactorRunner$1 onAttained
+INFO: Started all plugins
+May 19, 2014 12:56:51 AM jenkins.InitReactorRunner$1 onAttained
+INFO: Augmented all extensions
+May 19, 2014 12:56:51 AM jenkins.InitReactorRunner$1 onAttained
+INFO: Loaded all jobs
+May 19, 2014 12:57:07 AM org.jenkinsci.main.modules.sshd.SSHD start
+INFO: Started SSHD at port 51036
+May 19, 2014 12:57:07 AM jenkins.InitReactorRunner$1 onAttained
+INFO: Completed initialization
+May 19, 2014 12:57:07 AM hudson.TcpSlaveAgentListener <init>
+INFO: JNLP slave agent listener started on TCP port 51037
+May 19, 2014 12:57:07 AM hudson.WebAppMain$3 run
+INFO: Jenkins is fully up and running
+May 19, 2014 12:59:19 AM hudson.model.DownloadService$Downloadable load
+INFO: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+May 19, 2014 1:23:43 AM hudson.model.DownloadService$Downloadable load
+INFO: Obtained the updated data file for hudson.tasks.Ant.AntInstaller
+May 19, 2014 1:23:45 AM hudson.model.DownloadService$Downloadable load
+INFO: Obtained the updated data file for hudson.tools.JDKInstaller
+May 19, 2014 1:26:41 AM org.springframework.web.context.support.StaticWebApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.web.context.support.StaticWebApplicationContext@19b1933: display name [Root WebApplicationContext]; startup date [Mon May 19 01:26:41 IST 2014]; root of context hierarchy
+May 19, 2014 1:26:42 AM org.springframework.web.context.support.StaticWebApplicationContext obtainFreshBeanFactory
+INFO: Bean factory for application context [org.springframework.web.context.support.StaticWebApplicationContext@19b1933]: org.springframework.beans.factory.support.DefaultListableBeanFactory@9ae63d
+May 19, 2014 1:26:42 AM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@9ae63d: defining beans [authenticationManager]; root of factory hierarchy
+May 19, 2014 1:26:42 AM org.springframework.web.context.support.StaticWebApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.web.context.support.StaticWebApplicationContext@cd9cd: display name [Root WebApplicationContext]; startup date [Mon May 19 01:26:42 IST 2014]; root of context hierarchy
+May 19, 2014 1:26:42 AM org.springframework.web.context.support.StaticWebApplicationContext obtainFreshBeanFactory
+INFO: Bean factory for application context [org.springframework.web.context.support.StaticWebApplicationContext@cd9cd]: org.springframework.beans.factory.support.DefaultListableBeanFactory@413535
+May 19, 2014 1:26:42 AM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@413535: defining beans [filter,legacy]; root of factory hierarchy
+May 19, 2014 1:26:59 AM hudson.model.UpdateSite updateData
+INFO: Obtained the latest update center data file for UpdateSource default
+May 19, 2014 1:34:40 AM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+May 19, 2014 1:34:40 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-apr-8080"]
+May 19, 2014 1:34:40 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-apr-8009"]
+May 19, 2014 1:34:40 AM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+May 19, 2014 1:34:40 AM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak.
+May 19, 2014 1:34:41 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/jenkins] created a ThreadLocal with key of type [com.google.inject.internal.InjectorImpl$1] (value [com.google.inject.internal.InjectorImpl$1@d8e84e]) and a value of type [java.lang.Object[]] (value [[Ljava.lang.Object;@7b8a8e]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+May 19, 2014 1:34:41 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/jenkins] created a ThreadLocal with key of type [org.kohsuke.stapler.Stapler$3] (value [org.kohsuke.stapler.Stapler$3@c591b4]) and a value of type [java.text.SimpleDateFormat] (value [java.text.SimpleDateFormat@c4dc9900]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+May 19, 2014 1:34:41 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/jenkins] created a ThreadLocal with key of type [org.kohsuke.stapler.Stapler$3] (value [org.kohsuke.stapler.Stapler$3@c591b4]) and a value of type [java.text.SimpleDateFormat] (value [java.text.SimpleDateFormat@c4dc9900]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+May 19, 2014 1:34:41 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/jenkins] created a ThreadLocal with key of type [com.google.inject.internal.InjectorImpl$1] (value [com.google.inject.internal.InjectorImpl$1@d8e84e]) and a value of type [java.lang.Object[]] (value [[Ljava.lang.Object;@e0f93c]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+May 19, 2014 1:34:41 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/jenkins] created a ThreadLocal with key of type [com.google.inject.internal.InjectorImpl$1] (value [com.google.inject.internal.InjectorImpl$1@d8e84e]) and a value of type [java.lang.Object[]] (value [[Ljava.lang.Object;@b09fc]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+May 19, 2014 1:34:41 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/jenkins] created a ThreadLocal with key of type [org.kohsuke.stapler.Stapler$3] (value [org.kohsuke.stapler.Stapler$3@c591b4]) and a value of type [java.text.SimpleDateFormat] (value [java.text.SimpleDateFormat@c4dc9900]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+May 19, 2014 1:34:41 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/jenkins] created a ThreadLocal with key of type [org.kohsuke.stapler.Stapler$3] (value [org.kohsuke.stapler.Stapler$3@c591b4]) and a value of type [java.text.SimpleDateFormat] (value [java.text.SimpleDateFormat@c4dc9900]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+May 19, 2014 1:34:41 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/jenkins] created a ThreadLocal with key of type [com.google.inject.internal.InjectorImpl$1] (value [com.google.inject.internal.InjectorImpl$1@d8e84e]) and a value of type [java.lang.Object[]] (value [[Ljava.lang.Object;@bc92e7]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+May 19, 2014 1:34:41 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/jenkins] created a ThreadLocal with key of type [org.kohsuke.stapler.Stapler$3] (value [org.kohsuke.stapler.Stapler$3@c591b4]) and a value of type [java.text.SimpleDateFormat] (value [java.text.SimpleDateFormat@c4dc9900]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+May 19, 2014 1:34:41 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/jenkins] created a ThreadLocal with key of type [com.google.inject.internal.InjectorImpl$1] (value [com.google.inject.internal.InjectorImpl$1@d8e84e]) and a value of type [java.lang.Object[]] (value [[Ljava.lang.Object;@508b74]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+May 19, 2014 1:34:41 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/jenkins] created a ThreadLocal with key of type [org.kohsuke.stapler.Stapler$3] (value [org.kohsuke.stapler.Stapler$3@c591b4]) and a value of type [java.text.SimpleDateFormat] (value [java.text.SimpleDateFormat@c4dc9900]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+May 19, 2014 1:34:41 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/jenkins] created a ThreadLocal with key of type [com.google.inject.internal.InjectorImpl$1] (value [com.google.inject.internal.InjectorImpl$1@d8e84e]) and a value of type [java.lang.Object[]] (value [[Ljava.lang.Object;@1f3a540]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+May 19, 2014 1:34:41 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/jenkins] created a ThreadLocal with key of type [org.kohsuke.stapler.Stapler$3] (value [org.kohsuke.stapler.Stapler$3@c591b4]) and a value of type [java.text.SimpleDateFormat] (value [java.text.SimpleDateFormat@c4dc9900]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+May 19, 2014 1:34:41 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/jenkins] created a ThreadLocal with key of type [com.google.inject.internal.InjectorImpl$1] (value [com.google.inject.internal.InjectorImpl$1@d8e84e]) and a value of type [java.lang.Object[]] (value [[Ljava.lang.Object;@e64317]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+May 19, 2014 1:34:41 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/jenkins] created a ThreadLocal with key of type [org.kohsuke.stapler.Stapler$3] (value [org.kohsuke.stapler.Stapler$3@c591b4]) and a value of type [java.text.SimpleDateFormat] (value [java.text.SimpleDateFormat@c4dc9900]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+May 19, 2014 1:34:41 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/jenkins] created a ThreadLocal with key of type [com.google.inject.internal.InjectorImpl$1] (value [com.google.inject.internal.InjectorImpl$1@d8e84e]) and a value of type [java.lang.Object[]] (value [[Ljava.lang.Object;@13eda0a]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+May 19, 2014 1:34:41 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/jenkins] created a ThreadLocal with key of type [org.kohsuke.stapler.Stapler$3] (value [org.kohsuke.stapler.Stapler$3@c591b4]) and a value of type [java.text.SimpleDateFormat] (value [java.text.SimpleDateFormat@c4dc9900]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+May 19, 2014 1:34:41 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/jenkins] created a ThreadLocal with key of type [com.google.inject.internal.InjectorImpl$1] (value [com.google.inject.internal.InjectorImpl$1@d8e84e]) and a value of type [java.lang.Object[]] (value [[Ljava.lang.Object;@15cd899]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+May 19, 2014 1:34:41 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/jenkins] created a ThreadLocal with key of type [org.kohsuke.stapler.Stapler$3] (value [org.kohsuke.stapler.Stapler$3@c591b4]) and a value of type [java.text.SimpleDateFormat] (value [java.text.SimpleDateFormat@c4dc9900]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+May 19, 2014 1:34:41 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/jenkins] created a ThreadLocal with key of type [com.google.inject.internal.InjectorImpl$1] (value [com.google.inject.internal.InjectorImpl$1@d8e84e]) and a value of type [java.lang.Object[]] (value [[Ljava.lang.Object;@905ffa]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+May 19, 2014 1:34:41 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/jenkins] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@8d4175]) and a value of type [org.acegisecurity.context.SecurityContextImpl] (value [org.acegisecurity.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+May 19, 2014 1:34:45 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/remote-healthcare] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+May 19, 2014 1:34:45 AM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [/remote-healthcare] appears to have started a thread named [Timer-0] but has failed to stop it. This is very likely to create a memory leak.
+May 19, 2014 1:34:45 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-apr-8080"]
+May 19, 2014 1:34:45 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-apr-8009"]
+May 19, 2014 1:34:45 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-apr-8080"]
+May 19, 2014 1:34:46 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-apr-8009"]

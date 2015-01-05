@@ -1,0 +1,80 @@
+May 07, 2014 12:30:42 AM org.apache.catalina.core.ApplicationContext log
+INFO: No Spring WebApplicationInitializer types detected on classpath
+May 07, 2014 12:30:42 AM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext
+May 07, 2014 12:30:56 AM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring FrameworkServlet 'healthcare'
+May 07, 2014 12:31:04 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+May 07, 2014 12:31:04 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+May 07, 2014 12:31:04 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@1165990')
+May 07, 2014 12:33:54 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+May 07, 2014 12:33:54 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()
+May 07, 2014 12:33:54 AM org.apache.catalina.core.ApplicationContext log
+INFO: Destroying Spring FrameworkServlet 'healthcare'
+May 07, 2014 12:33:54 AM org.apache.catalina.core.ApplicationContext log
+INFO: Closing Spring root WebApplicationContext
+May 07, 2014 12:35:04 AM org.apache.catalina.core.ApplicationContext log
+INFO: No Spring WebApplicationInitializer types detected on classpath
+May 07, 2014 12:35:04 AM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext
+May 07, 2014 12:35:13 AM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring FrameworkServlet 'healthcare'
+May 07, 2014 12:35:21 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+May 07, 2014 12:35:21 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+May 07, 2014 12:35:21 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@1052619')
+May 07, 2014 12:36:49 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+May 07, 2014 12:36:49 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()
+May 07, 2014 12:36:49 AM org.apache.catalina.core.ApplicationContext log
+INFO: Destroying Spring FrameworkServlet 'healthcare'
+May 07, 2014 12:36:49 AM org.apache.catalina.core.ApplicationContext log
+INFO: Closing Spring root WebApplicationContext
+May 07, 2014 12:38:03 AM org.apache.catalina.core.ApplicationContext log
+INFO: No Spring WebApplicationInitializer types detected on classpath
+May 07, 2014 12:38:04 AM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext
+May 07, 2014 12:38:18 AM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring FrameworkServlet 'healthcare'
+May 07, 2014 12:38:26 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+May 07, 2014 12:38:26 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+May 07, 2014 12:38:26 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@2b9edb')
+May 07, 2014 12:41:16 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+May 07, 2014 12:41:16 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()
+May 07, 2014 12:41:16 AM org.apache.catalina.core.ApplicationContext log
+INFO: Destroying Spring FrameworkServlet 'healthcare'
+May 07, 2014 12:41:16 AM org.apache.catalina.core.ApplicationContext log
+INFO: Closing Spring root WebApplicationContext
+May 07, 2014 12:42:15 AM org.apache.catalina.core.ApplicationContext log
+INFO: No Spring WebApplicationInitializer types detected on classpath
+May 07, 2014 12:42:15 AM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext
+May 07, 2014 12:42:27 AM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring FrameworkServlet 'healthcare'
+May 07, 2014 12:42:36 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+May 07, 2014 12:42:36 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+May 07, 2014 12:42:36 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@10dccc2')
+May 07, 2014 12:47:52 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+May 07, 2014 12:47:52 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()
+May 07, 2014 12:47:52 AM org.apache.catalina.core.ApplicationContext log
+INFO: Destroying Spring FrameworkServlet 'healthcare'
+May 07, 2014 12:47:52 AM org.apache.catalina.core.ApplicationContext log
+INFO: Closing Spring root WebApplicationContext

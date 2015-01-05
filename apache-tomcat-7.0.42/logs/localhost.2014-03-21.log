@@ -1,0 +1,8 @@
+Mar 21, 2014 12:42:04 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+Mar 21, 2014 12:42:04 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()
+Mar 21, 2014 12:42:05 AM org.apache.catalina.core.ApplicationContext log
+INFO: Destroying Spring FrameworkServlet 'healthcare'
+Mar 21, 2014 12:42:26 AM org.apache.catalina.core.ApplicationContext log
+INFO: Closing Spring root WebApplicationContext

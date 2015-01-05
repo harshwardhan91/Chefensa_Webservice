@@ -1,0 +1,4 @@
+127.0.0.1 - - [06/Aug/2014:01:41:32 +0530] "GET /remote-healthcare/healthcare/doctordetail/gcm HTTP/1.1" 401 1061
+127.0.0.1 - - [06/Aug/2014:01:41:38 +0530] "GET /favicon.ico HTTP/1.1" 200 21630
+127.0.0.1 - - [06/Aug/2014:01:41:41 +0530] "GET /remote-healthcare/healthcare/doctordetail/gcm HTTP/1.1" 401 1061
+127.0.0.1 - - [06/Aug/2014:01:41:50 +0530] "GET /remote-healthcare/healthcare/doctordetail/gcm HTTP/1.1" 200 -

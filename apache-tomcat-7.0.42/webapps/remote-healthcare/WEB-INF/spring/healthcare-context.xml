@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:oauth="http://www.springframework.org/schema/security/oauth2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cache="http://www.springframework.org/schema/cache"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+              http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
+              http://www.springframework.org/schema/security/oauth2 http://www.springframework.org/schema/security/spring-security-oauth2.xsd
+              http://www.springframework.org/schema/cache
+           	  http://www.springframework.org/schema/cache/spring-cache.xsd
+           	  http://www.springframework.org/schema/aop 
+			  http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+	<cache:annotation-driven />
+	<aop:aspectj-autoproxy />
+	<beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<beans:property name="url"
+			value="jdbc:mysql://localhost:3306/database01" />
+		<beans:property name="username" value="root" />
+		<beans:property name="password" value="puneet" />
+		<!-- <beans:property name="password" value="healthcare" /> -->
+	</beans:bean>
+
+	<!-- <http auto-config='true'>
+		<intercept-url pattern="/**" access="ROLE_USER" />
+		<http-basic />
+	</http> -->
+
+	<beans:bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+
+		<beans:property name="dataSource">
+			<beans:ref bean="dataSource" />
+		</beans:property>
+
+		<beans:property name="hibernateProperties">
+			<beans:props>
+				<beans:prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect
+				</beans:prop>
+				<beans:prop key="hibernate.show_sql">true</beans:prop>
+				<beans:prop key="hibernate.jdbc.batch_size">20</beans:prop>
+				<beans:prop key="hibernate.connection.release_mode">after_statement</beans:prop>
+			</beans:props>
+		</beans:property>
+
+		<beans:property name="annotatedClasses">
+			<beans:list>
+				<beans:value>com.healthcare.remotehealthcare.model.PatientAddressVO
+				</beans:value>
+				<beans:value>com.healthcare.remotehealthcare.model.PatientDetailVO
+				</beans:value>
+				<beans:value>com.healthcare.remotehealthcare.model.PatientHealthDetailsVO
+				</beans:value>
+				<beans:value>com.healthcare.remotehealthcare.model.DoctorDetailVO
+				</beans:value>
+				<beans:value>com.healthcare.remotehealthcare.model.PrescriptionVO
+				</beans:value>
+				<beans:value>com.healthcare.remotehealthcare.model.HealthcareBoothVO
+				</beans:value>
+				<beans:value>com.healthcare.remotehealthcare.model.BoothDoctorsMappingVO
+				</beans:value>
+				<beans:value>com.healthcare.remotehealthcare.model.PatientAddressDetailVO
+				</beans:value>
+				<beans:value>com.healthcare.remotehealthcare.util.IntegerValueVO
+				</beans:value>
+				<beans:value>com.healthcare.remotehealthcare.model.DoctorFaqVO
+				</beans:value>
+				<beans:value>com.healthcare.remotehealthcare.model.DocBoothUserAccountMappingVO
+				</beans:value>
+				<beans:value>com.healthcare.remotehealthcare.model.WebDoctorBoothMappingVO
+				</beans:value>
+				<beans:value>com.healthcare.remotehealthcare.model.WebDoctorBoothPrescMappingVO
+				</beans:value>
+				<beans:value>com.healthcare.remotehealthcare.model.HealthPrescriptionHistoryVO
+				</beans:value>
+				<beans:value>com.healthcare.remotehealthcare.model.DoctorAdvisedPrecautionsVO
+				</beans:value>
+			</beans:list>
+		</beans:property>
+	</beans:bean>
+	
+	<!--Spring OAuth configurations start -->
+
+	<!-- <authentication-manager>
+		<authentication-provider>
+			<jdbc-user-service data-source-ref="dataSource"
+				users-by-username-query="select username,password, 'true' as enabled from USER_DETAILS where username=?"
+				authorities-by-username-query="select USER_DETAILS.username , USER_AUTH.AUTHORITY as authorities from USER_DETAILS,USER_AUTH  
+            where USER_DETAILS.username = ? AND USER_DETAILS.username=USER_AUTH.USERNAME " />
+		</authentication-provider>
+	</authentication-manager> -->
+	
+	<http>
+		<intercept-url pattern="/**" access="ROLE_USER" />
+		<http-basic />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="puneet" password="puneet" authorities="ROLE_USER" />
+				<user name="atal" password="atal" authorities="ROLE_USER" />
+				<user name="drsachin" password="sachin" authorities="ROLE_USER" />
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+
+	<!-- <oauth:client token-services-ref="oauth2TokenServices" />
+
+	<beans:bean id="oauth2TokenServices"
+		class="org.springframework.security.oauth2.consumer.token.InMemoryOAuth2ClientTokenServices" />
+
+	<oauth:resource id="healthcare" type="authorization_code"
+		clientId="foo" accessTokenUri="http://localhost:8080/healthcare/oauth/authorize"
+		userAuthorizationUri="http://localhost:8080/healthcare/oauth/user/authorize" />
+
+
+	<beans:bean id="healthcareService"
+		class="com.healthcare.remotehealthcare.security.HealthcareOAuthSrvice">
+		<beans:property name="healthcareURL"
+			value="http://localhost:8080/healthcare/cvs"></beans:property>
+		<beans:property name="healthcareRestTemplate">
+			<beans:bean
+				class="org.springframework.security.oauth2.consumer.OAuth2RestTemplate">
+				<beans:constructor-arg ref="healthcare" />
+			</beans:bean>
+		</beans:property>
+		<beans:property name="tokenServices" ref="oauth2TokenServices"></beans:property>
+	</beans:bean>
+ -->	<!-- Spring OAuth configurations end -->
+
+	<!-- Apache Lucene configurations start -->
+	
+	<beans:bean name="cacheManager" class="com.google.code.ssm.spring.SSMCacheManager">
+		<beans:property name="caches">
+			<beans:set>
+				<beans:bean class="com.google.code.ssm.spring.SSMCache">
+					<beans:constructor-arg name="cache" index="0" ref="defaultCache" />
+					<!-- 5 minutes -->
+					<beans:constructor-arg name="expiration" index="1" value="300" />
+					<!-- @CacheEvict(..., "allEntries" = true) doesn't work -->
+					<beans:constructor-arg name="allowClear" index="2" value="false" />
+				</beans:bean>
+			</beans:set>
+		</beans:property>
+
+	</beans:bean>
+
+	<beans:bean name="defaultCache" class="com.google.code.ssm.CacheFactory">
+		<beans:property name="cacheName" value="defaultCache" />
+		<beans:property name="cacheClientFactory">
+			<beans:bean name="cacheClientFactory"
+				class="com.google.code.ssm.providers.xmemcached.MemcacheClientFactoryImpl" />
+		</beans:property>
+		<beans:property name="addressProvider">
+			<beans:bean class="com.google.code.ssm.config.DefaultAddressProvider">
+				<beans:property name="address" value="127.0.0.1:11211" />
+			</beans:bean>
+		</beans:property>
+		<beans:property name="configuration">
+			<beans:bean class="com.google.code.ssm.providers.CacheConfiguration">
+				<beans:property name="consistentHashing" value="true" />
+			</beans:bean>
+		</beans:property>
+
+	</beans:bean>
+	
+	<beans:bean id="doctorSearchManager" class="com.healthcare.remotehealthcare.searchmanager.DoctorSearchManager">
+		<beans:constructor-arg index="0"
+			value="/var/lib/healthcarelucene" />
+	</beans:bean>
+	
+	<beans:bean id="patientSearchManager" class="com.healthcare.remotehealthcare.searchmanager.PatientSearchManager">
+		<beans:constructor-arg index="0"
+			value="/var/lib/healthcarelucene" />
+	</beans:bean>
+	
+	<beans:bean id="doctorWritehManager" class="com.healthcare.remotehealthcare.searchwriter.DoctorWriterManagaer">
+			<beans:constructor-arg index="0"
+			value="/var/lib/healthcarelucene" />
+	</beans:bean>
+	
+	<beans:bean id="patientWritehManager" class="com.healthcare.remotehealthcare.searchwriter.PatientWriterManagaer">
+			<beans:constructor-arg index="0"
+			value="/var/lib/healthcarelucene" />
+	</beans:bean>
+	
+	<!-- Apache Lucene configurations end -->
+
+	<beans:bean id = "healthcareAspect" class="com.healthcare.remotehealthcare.aspects.HealthcarreIndexWrterAspect"/>
+	
+	<beans:bean id = "healthcareLoggerAspect" class="com.healthcare.remotehealthcare.aspects.HealthcareLoggerAspect"/>
+	
+	<beans:bean id = "validationAspects" class="com.healthcare.remotehealthcare.aspects.ValidationAspects"/>
+	
+	<!-- <beans:bean id="validationFactory" class="com.healthcare.remotehealthcare.validations.ValidationFactory"></beans:bean> -->
+	
+	<beans:bean id="healthcareSocketServer" class="com.healthcare.remotehealthcare.socket.connection.HealthcareSocketFileToServer"/>
+	
+	<beans:bean id="healthcareSocketClient" class="com.healthcare.remotehealthcare.socket.connection.HealthcareSocketFileToClient"/>
+	
+	
+	<beans:bean id="doctorFaqBO"
+		class="com.healthcare.remotehealthcare.bo.impl.DoctorFaqBOImpl">
+		<beans:property name="doctorFaqDAO" ref="doctorFaqDAO" />
+	</beans:bean>
+	
+	<beans:bean id="doctorFaqDAO"
+		class="com.healthcare.remotehealthcare.dao.impl.DoctorFaqDAOImpl">
+		<beans:property name="sessionFactory" ref="sessionFactory" />
+	</beans:bean>
+	
+	
+	<beans:bean id="apnaAspatalMappingsBO"
+		class="com.healthcare.remotehealthcare.bo.impl.ApnaAspatalMappingsBOImpl">
+		<beans:property name="apnaAspatalMappingsDAO" ref="apnaAspatalMappingsDAO" />
+	</beans:bean>
+	
+	<beans:bean id="apnaAspatalMappingsDAO"
+		class="com.healthcare.remotehealthcare.dao.impl.ApnaAspatalMappingsDAOImpl">
+		<beans:property name="sessionFactory" ref="sessionFactory" />
+	</beans:bean>
+	
+	<beans:bean id="referalToAnotherDoctorBO"
+		class="com.healthcare.remotehealthcare.bo.impl.ReferalToAnotherDoctorBOImpl">
+		<beans:property name="findDoctorGcmId" ref="findDoctorGcmId" />
+		<beans:property name="findBoothGcmId" ref="findBoothGcmId" />
+		<beans:property name="doctorDetailDAO" ref="doctorDetailDAO" />
+		<beans:property name="healthDetailToDoctorBO" ref="healthDetailToDoctorBO" />
+	</beans:bean>
+	
+	<beans:bean id="broadcastRequestToAllDoctorsBO"
+		class="com.healthcare.remotehealthcare.bo.impl.BroadcastRequestToAllDoctorsBOImpl">
+		<beans:property name="broadcastRequestToAllDoctorsDAO" ref="broadcastRequestToAllDoctorsDAO" />
+		<beans:property name="findDoctorGcmId" ref="findDoctorGcmId"/>
+	</beans:bean>
+	
+	<beans:bean id="broadcastRequestToAllDoctorsDAO"
+		class="com.healthcare.remotehealthcare.dao.impl.BroadcastRequestToAllDoctorsDAOImpl">
+		<beans:property name="sessionFactory" ref="sessionFactory" />
+	</beans:bean>
+	
+	
+	<beans:bean id="boothDoctorMappingBO"
+		class="com.healthcare.remotehealthcare.bo.impl.BoothDoctorMappingBOImpl">
+		<beans:property name="boothDoctorMappingDAO" ref="boothDoctorMappingDAO" />
+	</beans:bean>
+	
+	<beans:bean id="boothDoctorMappingDAO"
+		class="com.healthcare.remotehealthcare.dao.impl.BoothDoctorMappingDAOImpl">
+		<beans:property name="sessionFactory" ref="sessionFactory" />
+	</beans:bean>
+	
+	<beans:bean id="ApnaAspatalSearchBO"
+		class="com.healthcare.remotehealthcare.bo.impl.ApnaAspatalSearchBOImpl">
+		<beans:property name="apnaAspatalSearchDAO" ref="ApnaAspatalSearchDAO" />
+	</beans:bean>
+	
+	<beans:bean id="ApnaAspatalSearchDAO"
+		class="com.healthcare.remotehealthcare.dao.impl.ApnaAspatalSearchDAOImpl">
+		<beans:property name="sessionFactory" ref="sessionFactory" />
+	</beans:bean>
+	
+	
+	<beans:bean id="doctorPatientChatBO"
+		class="com.healthcare.remotehealthcare.bo.impl.DoctorPatientChatBOImpl">
+		<beans:property name="findDoctorGcmId" ref="findDoctorGcmId"/>
+		<beans:property name="findBoothGcmId" ref="findBoothGcmId" />
+	</beans:bean>
+	
+	<beans:bean id="healthcareBoothBO"
+		class="com.healthcare.remotehealthcare.bo.impl.HealthcareBoothBOImpl">
+		<beans:property name="healthcareBoothDAO" ref="healthcareBoothDAO" />
+		<beans:property name="boothDoctorMappingDAO" ref="boothDoctorMappingDAO" />
+	</beans:bean>
+	
+	<beans:bean id="healthcareBoothDAO"
+		class="com.healthcare.remotehealthcare.dao.impl.HealthcareBoothDAOImpl">
+		<beans:property name="sessionFactory" ref="sessionFactory" />
+	</beans:bean>
+	
+	<beans:bean id="findDoctorGcmId" class="com.healthcare.remotehealthcare.gcmid.doctor.FindDoctorGcmId">
+		<beans:property name="doctorDetailDAO" ref="doctorDetailDAO" />
+		<beans:property name="patientHealthDetailDAO" ref="patientHealthDetailDAO" />
+	</beans:bean>
+	
+	<beans:bean id="findBoothGcmId" class="com.healthcare.remotehealthcare.gcmid.booth.FindBoothGcmId">
+		<beans:property name="boothDetailDAO" ref="boothDetailDAO" />
+		<beans:property name="patientDetailDAO" ref="patientDetailDAO" />
+	</beans:bean>
+	
+	<beans:bean id="boothDetailDAO"
+		class="com.healthcare.remotehealthcare.dao.impl.BoothDetailDAOImpl">
+		<beans:property name="sessionFactory" ref="sessionFactory" />
+	</beans:bean>
+	
+	<beans:bean id="healthDetailToDoctorBO" class="com.healthcare.remotehealthcare.bo.impl.HealthDetailToDoctorBOImpl">
+		<beans:property name="healthDetailToDoctorDAO" ref="healthDetailToDoctorDAO" />
+		<beans:property name="patientHealthDetailDAO" ref="patientHealthDetailDAO" />
+		<beans:property name="doctorDetailDAO" ref="doctorDetailDAO" />
+		<beans:property name="findDoctorGcmId" ref="findDoctorGcmId"></beans:property>
+		<beans:property name="findBoothGcmId" ref="findBoothGcmId" />
+	</beans:bean>
+	
+	<beans:bean id="doctorPrescriptionBO"
+		class="com.healthcare.remotehealthcare.bo.impl.DoctorPrescriptionBOImpl">
+		<beans:property name="doctorPrescriptionDAO" ref="doctorPrescriptionDAO" />
+		<beans:property name="doctorDetailDAO" ref="doctorDetailDAO" />
+		<beans:property name="patientHealthDetailDAO" ref="patientHealthDetailDAO" />
+		<beans:property name="findBoothGcmId" ref="findBoothGcmId" />
+	</beans:bean>
+	
+	<beans:bean id="doctorPrescriptionDAO"
+		class="com.healthcare.remotehealthcare.dao.impl.DoctorPrescriptionDAOImpl">
+		<beans:property name="sessionFactory" ref="sessionFactory" />
+	</beans:bean>
+	
+	<beans:bean id="healthDetailToDoctorDAO"
+		class="com.healthcare.remotehealthcare.dao.impl.HealthDetailToDoctorDAOImpl">
+		<beans:property name="sessionFactory" ref="sessionFactory" />
+	</beans:bean>
+	
+	<beans:bean id="patientAddressBO"
+		class="com.healthcare.remotehealthcare.bo.impl.PatientAddressBOImpl">
+		<beans:property name="patientAddressDAO" ref="patientAddressDAO" />
+		<beans:property name="patientDetailDAO" ref="patientDetailDAO" />
+	</beans:bean>
+
+	<beans:bean id="patientAddressDAO"
+		class="com.healthcare.remotehealthcare.dao.impl.PatientAddressDAOImpl">
+		<beans:property name="sessionFactory" ref="sessionFactory" />
+	</beans:bean>
+
+	<beans:bean id="patientDetailBO"
+		class="com.healthcare.remotehealthcare.bo.impl.PatientDetailBOImpl">
+		<beans:property name="patientDetailDAO" ref="patientDetailDAO" />
+	</beans:bean>
+
+	<beans:bean id="patientDetailDAO"
+		class="com.healthcare.remotehealthcare.dao.impl.PatientDetailDAOImpl">
+		<beans:property name="sessionFactory" ref="sessionFactory" />
+	</beans:bean>
+
+	<beans:bean id="patientHealthDetailBO"
+		class="com.healthcare.remotehealthcare.bo.impl.PatientHealthDetailBOImpl">
+		<beans:property name="patientHealthDetailDAO" ref="patientHealthDetailDAO" />
+	</beans:bean>
+
+	<beans:bean id="patientHealthDetailDAO"
+		class="com.healthcare.remotehealthcare.dao.impl.PatientHealthDetailDAOImpl">
+		<beans:property name="sessionFactory" ref="sessionFactory" />
+	</beans:bean>
+
+	<beans:bean id="doctorDetailBO"
+		class="com.healthcare.remotehealthcare.bo.impl.DoctorDetailBOImpl">
+		<beans:property name="doctorDetailDAO" ref="doctorDetailDAO" />
+	</beans:bean>
+
+	<beans:bean id="doctorDetailDAO"
+		class="com.healthcare.remotehealthcare.dao.impl.DoctorDetailDAOImpl">
+		<beans:property name="sessionFactory" ref="sessionFactory" />
+	</beans:bean>
+
+</beans:beans>

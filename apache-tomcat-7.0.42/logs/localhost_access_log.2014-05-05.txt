@@ -1,0 +1,6 @@
+127.0.0.1 - - [05/May/2014:20:56:16 +0530] "GET /ApnaAspatalBoothWebClient/ApnaAspatalBoothHome.html HTTP/1.1" 200 7762
+127.0.0.1 - - [05/May/2014:20:56:16 +0530] "GET /ApnaAspatalBoothWebClient/js/jquery-2.0.3.min.js HTTP/1.1" 200 250978
+127.0.0.1 - - [05/May/2014:20:56:17 +0530] "GET /ApnaAspatalBoothWebClient/apnaaspatal.jpg HTTP/1.1" 200 39731
+127.0.0.1 - - [05/May/2014:20:56:17 +0530] "GET /ApnaAspatalBoothWebClient/Remotecare.jpg HTTP/1.1" 200 7443
+127.0.0.1 - - [05/May/2014:20:56:17 +0530] "GET /ApnaAspatalBoothWebClient/Remotedoctor.jpg HTTP/1.1" 200 131192
+127.0.0.1 - - [05/May/2014:20:56:17 +0530] "GET /favicon.ico HTTP/1.1" 200 21630
